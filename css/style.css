@@ -3,66 +3,87 @@ background-image: url("file:///Users/anh/Downloads/whitebackground.jpg");
 background-repeat: title;
 } */
 @import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
-
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Permanent+Marker');
 body {
-  font-family: 'Do Hyeon', sans-serif;
+  /* font-family: 'Do Hyeon', sans-serif; */
+  font-family: 'Permanent Marker', cursive;
   font-size: 20px;
+  color: hotPink;
+  background: url("file:///Users/anh/Downloads/white-animated.gif");
+  background-position: title;
+
+}
+
+.square{
+  line-height: 100%;
 }
 
 
 #headerImgContainer {
   margin: 0 auto;
-
   /* width: 236px; */
 }
 
 
-/* #players, button {
-  margin: 0 auto;
 
-} */
-
-
-
-
-#X {
+#players {
   float: left;
+  font-size: 30px;
+
 }
 
-#O {
-  float: right
-}
 
+button {
+  float: right;
+  font-size: 15px;
+  color: hotPink;
+}
 
 h1 {
   text-align: center;
 }
 
-table {
+/* table {
   width: 30%;
 
-}
+} */
 td {
-  width: 10%;
+  width: 130px;
+  height: 130px;
   text-align: center;
-
+  /* padding-top: 30px; */
+  vertical-align: middle;
 }
-td:after {
+/* td:after {
   content: '';
   display: block;
   margin-top: 100%;
-}
+  text-align: center;
+  vertical-align: middle;
 
+} */
+
+tr {
+  text-align: center;
+  /* padding-top: 30px; */
+}
 
 table {
   border-collapse: collapse;
+  color: hotpink;
+  font-size: 60px;
+  font-family: 'Permanent Marker', cursive;
+  table-layout:fixed !important;
   position:fixed;
   margin-left:-200px;
   margin-top:-150px;
   top:40%;
   left:50%;
+  width: 30%;
 
 }
+
 td {
   border: 6px solid #222;
 }
@@ -115,3 +136,18 @@ tr:nth-of-type(3) td {
     cursor: pointer;
   }
   */
+
+
+
+  iframe {
+    display: none;
+  }
+
+
+  footer {
+     position:absolute;
+     bottom:0;
+     width:100%;
+     height:60px;   /* Height of the footer */
+     text-align: center;
+  }

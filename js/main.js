@@ -17,7 +17,7 @@ const nextTurn = function () {
 };
 
 let moveCount = 0;
-const gameBoard = ["", "", "", "", "", "", "", "", ""];
+let gameBoard = ["", "", "", "", "", "", "", "", ""];
 
 
 // Check for Winning condition:
@@ -52,7 +52,6 @@ const checkForWin = function () {
 
 $(document).ready(function(){
 
-
 //add event handler
 $(".square").click(function( event ){
 
@@ -72,20 +71,25 @@ $(".square").click(function( event ){
 
 
   const winner = checkForWin();
-  if (winner === "X") {
-    alert("Player X wins");
-  } else if (winner === "O") {
-    alert("Player O wins");
-  // if( winner !== false ) {
-    // alert(`Player ${winner} wins`);
+  // if (winner === "X" && winner !== "") {
+  //   alert("Player X wins");
+  // } else if (winner === "O") {
+  //   alert("Player O wins");
+  if( winner !== false && winner !== "") {
+    alert(`Player ${winner} wins`);
     return;
   } else if (moveCount === 9 ){
     alert ("No one wins");
   }
-  nextTurn();
 
-// add dance gif when no one wins
+  nextTurn();
 
 }); // end of event handler
 
 }); // end jQuery
+
+
+
+
+
+//reset function
