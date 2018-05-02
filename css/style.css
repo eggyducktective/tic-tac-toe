@@ -1,10 +1,13 @@
-/* body {
-background-image: url("file:///Users/anh/Downloads/whitebackground.jpg");
-background-repeat: title;
-} */
-@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+
+
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One|Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+
+
+
+
 body {
   /* font-family: 'Do Hyeon', sans-serif; */
   font-family: 'Permanent Marker', cursive;
@@ -26,19 +29,33 @@ body {
 }
 
 
+#headerImgContainer2 {
+  margin: 0 auto;
+  float: right;
+}
+
 
 #players {
   float: left;
   font-size: 30px;
-
 }
 
 
 button {
   float: right;
   font-size: 15px;
+  font-weight: bold;
   color: hotPink;
+  border-radius: 50px;
+  border: 2px solid #E175AD;
+  outline: none;
 }
+
+
+button:hover {
+  background: #8FC7C2;
+}
+
 
 h1 {
   text-align: center;
@@ -54,15 +71,9 @@ td {
   text-align: center;
   /* padding-top: 30px; */
   vertical-align: middle;
+  border: 6px solid #222;
 }
-/* td:after {
-  content: '';
-  display: block;
-  margin-top: 100%;
-  text-align: center;
-  vertical-align: middle;
 
-} */
 
 tr {
   text-align: center;
@@ -83,10 +94,11 @@ table {
   width: 30%;
 
 }
-
+/*
 td {
   border: 6px solid #222;
-}
+} */
+
 td:first-of-type {
   border-left-color: transparent;
   border-top-color: transparent;
@@ -103,51 +115,16 @@ tr:nth-of-type(3) td {
 }
 
 
-
-  /*
-
-   * {
-    margin: 0;
-    padding: 0;
-  }
-
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-
-  #board {
-    padding: 0px;
-    margin: 0 auto;
-    margin-top: 25px;
-  }
-
-  #board tr td {
-    width: 80px;
-    height: 80px;
-    border: 1px solid #1c1c1c;
-    font-family: Helvetica;
-    font-size: 30px;
-    text-align: center;
-  }
-
-  #board tr td:hover {
-    background: #e4e4e4;
-    cursor: pointer;
-  }
-  */
+iframe {
+  display: none;
+}
 
 
-
-  iframe {
-    display: none;
-  }
-
-
-  footer {
-     position:absolute;
-     bottom:0;
-     width:100%;
-     height:60px;   /* Height of the footer */
-     text-align: center;
-  }
+footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 60px;   /* Height of the footer */
+   text-align: center;
+   font-family: 'Indie Flower', cursive;
+}
