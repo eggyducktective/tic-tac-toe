@@ -16,36 +16,61 @@ body {
   background: url("file:///Users/anh/Downloads/white-animated.gif");
   background-position: title;
 
+
 }
 
-.square{
+#alert {
+  display: none;
+  position: absolute;
+  margin-left: 40%;
+  top: 15vh;
+  left: 33vw;
+  height: 250px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  vertical-align: middle;
+  width: 330px;
+  border: 3px solid hotpink;
+  font-size: 60px;
+  z-index: 2;
+  color: #5E5E5E;
+  border-radius: 60px;
+
+}
+
+
+.square {
   line-height: 100%;
 }
 
 
 #headerImgContainer {
   margin: 0 auto;
+  padding-left: 30px;
   /* width: 236px; */
 }
 
-
+/*
 #headerImgContainer2 {
   margin: 0 auto;
   float: right;
-}
+} */
 
 
 #players {
   float: left;
-  font-size: 30px;
+  color: #E175AD;
+  font-size: 35px;
+  padding-left: 65px;
 }
 
 
 button {
   float: right;
-  font-size: 15px;
+  margin-right: 110px;
+  font-size: 35px;
   font-weight: bold;
-  color: hotPink;
+  color: #E48D3F;
   border-radius: 50px;
   border: 2px solid #E175AD;
   outline: none;
@@ -59,12 +84,10 @@ button:hover {
 
 h1 {
   text-align: center;
+  color: #3074DF;
 }
 
-/* table {
-  width: 30%;
 
-} */
 td {
   width: 130px;
   height: 130px;
@@ -86,8 +109,8 @@ table {
   font-size: 60px;
   font-family: 'Permanent Marker', cursive;
   table-layout:fixed !important;
-  position:fixed;
-  margin-left:-200px;
+  position: fixed;
+  margin-left:-220px;
   margin-top:-150px;
   top:40%;
   left:50%;
@@ -122,9 +145,19 @@ iframe {
 
 footer {
    position: absolute;
+   clear: both;
    bottom: 0;
    width: 100%;
    height: 60px;   /* Height of the footer */
    text-align: center;
+   font-weight: bold;
+   color: #3074DF;
+   font-size: 20px;
    font-family: 'Indie Flower', cursive;
 }
+
+
+/* @media only screen and (max-width: 414px) {
+  .deviceWidth {width:280px!important; padding:0;}
+  .center {text-align: center!important;}
+    } */
