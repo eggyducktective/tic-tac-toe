@@ -13,7 +13,7 @@ body {
   font-family: 'Permanent Marker', cursive;
   font-size: 20px;
   color: hotPink;
-  background: url("file:///Users/anh/Downloads/white-animated.gif");
+  background: url("../img/background-gif.gif");
   background-position: title;
 
 
@@ -22,10 +22,12 @@ body {
 #alert {
   display: none;
   position: absolute;
+  font-family: 'Permanent Marker', cursive;
   margin-left: 40%;
   top: 15vh;
   left: 33vw;
   height: 250px;
+  outline: none;
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
   vertical-align: middle;
@@ -33,7 +35,7 @@ body {
   border: 3px solid hotpink;
   font-size: 60px;
   z-index: 2;
-  color: #5E5E5E;
+  color: #8A7BEA;
   border-radius: 60px;
 
 }
@@ -70,6 +72,7 @@ button {
   margin-right: 110px;
   font-size: 35px;
   font-weight: bold;
+  font-family: 'Permanent Marker', cursive;
   color: #E48D3F;
   border-radius: 50px;
   border: 2px solid #E175AD;
@@ -84,7 +87,7 @@ button:hover {
 
 h1 {
   text-align: center;
-  color: #3074DF;
+  color: #3A9FF8;
 }
 
 
@@ -117,10 +120,7 @@ table {
   width: 30%;
 
 }
-/*
-td {
-  border: 6px solid #222;
-} */
+
 
 td:first-of-type {
   border-left-color: transparent;

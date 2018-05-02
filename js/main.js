@@ -20,28 +20,28 @@ let gameBoard = ["", "", "", "", "", "", "", "", ""];
 // Diagonal: [0, 4, 8] [2, 4, 6]
 
 const checkForWin = function () {
-   if (gameBoard[0] === gameBoard[1] && gameBoard[1] === gameBoard[2]) {
+   if (gameBoard[0] === gameBoard[1] && gameBoard[1] === gameBoard[2] && gameBoard[2]) {
      return gameBoard[2];
 
-   } else if (gameBoard[3] === gameBoard[4] && gameBoard[4] === gameBoard[5]) {
+   } else if (gameBoard[3] === gameBoard[4] && gameBoard[4] === gameBoard[5] && gameBoard[5]) {
      return gameBoard[5];
 
-   } else if (gameBoard[6] === gameBoard[7] && gameBoard[7] === gameBoard[8]) {
+   } else if (gameBoard[6] === gameBoard[7] && gameBoard[7] === gameBoard[8] && gameBoard[8]) {
      return gameBoard[8];
 
-   } else if (gameBoard[0] === gameBoard[3] && gameBoard[3] === gameBoard[6]) {
+   } else if (gameBoard[0] === gameBoard[3] && gameBoard[3] === gameBoard[6] && gameBoard[6]) {
      return gameBoard[6];
 
-   } else if (gameBoard[1] === gameBoard[4] && gameBoard[4] === gameBoard[7]) {
+   } else if (gameBoard[1] === gameBoard[4] && gameBoard[4] === gameBoard[7] && gameBoard[7]) {
      return gameBoard[7];
 
-   } else if (gameBoard[2] === gameBoard[5] && gameBoard[5] === gameBoard[8]) {
+   } else if (gameBoard[2] === gameBoard[5] && gameBoard[5] === gameBoard[8] && gameBoard[8]) {
      return gameBoard[8];
 
-   } else if (gameBoard[0] === gameBoard[4] && gameBoard[4]=== gameBoard[8]) {
+   } else if (gameBoard[0] === gameBoard[4] && gameBoard[4] === gameBoard[8] && gameBoard[8]) {
      return gameBoard[8];
 
-   } else if (gameBoard[2] === gameBoard[4] && gameBoard[4] === gameBoard[6]) {
+   } else if (gameBoard[2] === gameBoard[4] && gameBoard[4] === gameBoard[6] && gameBoard[6]) {
      return gameBoard[6];
 
    } else {
