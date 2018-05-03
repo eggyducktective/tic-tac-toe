@@ -1,4 +1,3 @@
-
 //check whose turn it is, X or O,
 
 let whoseTurn = "X";
@@ -17,7 +16,7 @@ let scoreX = 0;
 let scoreO = 0;
 
 
-
+let gameOver = false;
 let moveCount = 0;
 let gameBoard = ["", "", "", "", "", "", "", "", ""];
 
@@ -69,6 +68,7 @@ $(document).ready(function() {
   $button.on("click", function() {
     gameBoard = ["", "", "", "", "", "", "", "", ""];
     moveCount = 0;
+    gameOver = false;
     whoseTurn = "X";
     for (let i = 0; i < gameBoard.length; i++) {
       tempSquares[`$square${i}`].html(""); //reset the squares
@@ -88,7 +88,8 @@ $(document).ready(function() {
     // check if square already occupied:
     // if square is already taken, return from this function early
     const boardIndex = $(this).attr("id");
-    if (gameBoard[boardIndex].length > 0) {
+
+    if ( gameBoard[boardIndex].length > 0 || gameOver  ) {
       return; //make sure players can't play over a move
     }
 
@@ -114,8 +115,7 @@ $(document).ready(function() {
         $("#O").text(`Player O score: ${scoreO}`);
         $("#X").text(`Player X score: ${scoreX}`);
       }
-
-
+      gameOver = true;
       return;
 
     } else if (moveCount === gameBoard.length) {
@@ -124,6 +124,8 @@ $(document).ready(function() {
 
     nextTurn();
 
+    // AI Player move here: something like AIMove();
+    // nextTurn();  // human player's turn again
 
   }); // end of event handler
 
