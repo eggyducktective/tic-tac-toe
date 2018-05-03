@@ -1,92 +1,42 @@
 # Tic Tac Toe Game
 
-For our first solo project, we are building a simple Tic Tac Toe game using Javascript, jQuery, HTML and CSS.
+For our first solo project, we are building a simple Tic Tac Toe game using Javascript, jQuery, HTML and CSS.  
+
+Playable from: http://www.annasworkshop.com/tic-tac-toe/
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+You are able to fork this:
+
+```
+git clone git@github.com:eggyducktective/tic-tac-toe.git
+
+```
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You will need to install your favourite web browser to play this fun game.
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+There are no tests unfortunately. But I hope you have an amazing time.
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Deployed on Github pages.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+Feel free to join the Tic Tac Toe revolution by forking me and creating a pull request.
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Anna Tran - https://github.com/eggyducktective
 
 ## Acknowledgments
 
 * Google is a great resource.
 * Saw movie.
-
-
-
-
-
-Add CommentCol
+* Thank the evil AI for taking part in this brilliant game where its chance of winning is not really that great...
