@@ -1,13 +1,6 @@
-
-
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One|Permanent+Marker');
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
-
-
-
-
-
 body {
   /* font-family: 'Do Hyeon', sans-serif; */
   font-family: 'Permanent Marker', cursive;
@@ -15,8 +8,6 @@ body {
   color: hotPink;
   background: url("../img/background-gif.gif");
   background-position: title;
-
-
 }
 
 #alert {
@@ -37,14 +28,11 @@ body {
   z-index: 2;
   color: #8A7BEA;
   border-radius: 60px;
-
 }
-
 
 .square {
   line-height: 100%;
 }
-
 
 #headerImgContainer {
   margin: 0 auto;
@@ -52,20 +40,12 @@ body {
   /* width: 236px; */
 }
 
-/*
-#headerImgContainer2 {
-  margin: 0 auto;
-  float: right;
-} */
-
-
 #players {
   float: left;
   color: #E175AD;
   font-size: 35px;
   padding-left: 65px;
 }
-
 
 button {
   float: right;
@@ -79,17 +59,14 @@ button {
   outline: none;
 }
 
-
 button:hover {
   background: #8FC7C2;
 }
-
 
 h1 {
   text-align: center;
   color: #3A9FF8;
 }
-
 
 td {
   width: 130px;
@@ -99,7 +76,6 @@ td {
   vertical-align: middle;
   border: 6px solid #222;
 }
-
 
 tr {
   text-align: center;
@@ -111,53 +87,47 @@ table {
   color: hotpink;
   font-size: 60px;
   font-family: 'Permanent Marker', cursive;
-  table-layout:fixed !important;
+  table-layout: fixed !important;
   position: fixed;
-  margin-left:-220px;
-  margin-top:-150px;
-  top:40%;
-  left:50%;
+  margin-left: -220px;
+  margin-top: -150px;
+  top: 40%;
+  left: 50%;
   width: 30%;
-
 }
-
 
 td:first-of-type {
   border-left-color: transparent;
   border-top-color: transparent;
 }
+
 td:nth-of-type(2) {
   border-top-color: transparent;
 }
+
 td:nth-of-type(3) {
   border-right-color: transparent;
   border-top-color: transparent;
 }
+
 tr:nth-of-type(3) td {
   border-bottom-color: transparent;
 }
-
 
 iframe {
   display: none;
 }
 
-
 footer {
-   position: absolute;
-   clear: both;
-   bottom: 0;
-   width: 100%;
-   height: 60px;   /* Height of the footer */
-   text-align: center;
-   font-weight: bold;
-   color: #3074DF;
-   font-size: 20px;
-   font-family: 'Indie Flower', cursive;
+  position: absolute;
+  clear: both;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* Height of the footer */
+  text-align: center;
+  font-weight: bold;
+  color: #3074DF;
+  font-size: 20px;
+  font-family: 'Indie Flower', cursive;
 }
-
-
-/* @media only screen and (max-width: 414px) {
-  .deviceWidth {width:280px!important; padding:0;}
-  .center {text-align: center!important;}
-    } */
