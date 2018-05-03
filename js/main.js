@@ -11,6 +11,13 @@ const nextTurn = function() {
   }
 };
 
+
+
+let scoreX = 0;
+let scoreO = 0;
+
+
+
 let moveCount = 0;
 let gameBoard = ["", "", "", "", "", "", "", "", ""];
 
@@ -93,8 +100,22 @@ $(document).ready(function() {
 
     const winner = checkForWin();
     if (winner !== false && winner !== "") {
-      // alert(`Player ${winner} wins`);
+
       declareWinner(`Player ${winner} wins!!! &#9996;`);
+
+      if (gameBoard[boardIndex] === "X") {
+        scoreX++;
+        scoreO;
+        $("#X").text(`Player X score: ${scoreX}`);
+        $("#O").text(`Player O score: ${scoreO}`);
+      } else {
+        scoreO++;
+        scoreX;
+        $("#O").text(`Player O score: ${scoreO}`);
+        $("#X").text(`Player X score: ${scoreX}`);
+      }
+
+
       return;
 
     } else if (moveCount === gameBoard.length) {
@@ -102,6 +123,7 @@ $(document).ready(function() {
     } // end of if
 
     nextTurn();
+
 
   }); // end of event handler
 
@@ -111,3 +133,7 @@ $(document).ready(function() {
   }; // end of function
 
 }); // end jQuery
+
+
+
+//math random for AI Mathfloor[mathrandom]
