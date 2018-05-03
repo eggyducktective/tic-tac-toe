@@ -1,6 +1,9 @@
 //check whose turn it is, X or O,
 
 let whoseTurn = "X";
+let AiTurn = "O";
+let AiMode = true;
+
 
 const nextTurn = function() {
   if (whoseTurn == "X") {
@@ -9,7 +12,6 @@ const nextTurn = function() {
     whoseTurn = "X";
   }
 };
-
 
 
 let scoreX = 0;
@@ -59,9 +61,21 @@ const checkForWin = function() {
 // let resetGame;
 let tempSquares = {};
 
+const testMove = function (){
+  return Math.floor(Math.random()*9)
+}
+
+const AiMove = function () {
+  const squareID = testMove();
+
+  if ( $("#" + squareID).html() == "&nbsp;" || $("#" + squareID).html() == "") {
+    $("#" + squareID).click();
+  } else {
+    AiMove();
+  }
+};
 
 $(document).ready(function() {
-
 
   //add event handler for button
   const $button = $("#buttonPosition");
@@ -101,19 +115,27 @@ $(document).ready(function() {
 
     const winner = checkForWin();
     if (winner !== false && winner !== "") {
-
-      declareWinner(`Player ${winner} wins!!! &#9996;`);
+      // if (gameBoard[boardIndex]) === "X" {
+      //   declareWinner("You win");
+      // } else {
+      //   declareWinner("Computer wins");
+      // }
+      const players = {
+        "X": "You win",
+        "O": "Evil AI wins"
+      }
+      declareWinner(`${players[winner]}!!! &#9996;`);
 
       if (gameBoard[boardIndex] === "X") {
         scoreX++;
         scoreO;
-        $("#X").text(`Player X score: ${scoreX}`);
-        $("#O").text(`Player O score: ${scoreO}`);
+        $("#X").text(`Your score: ${scoreX}`);
+        $("#O").text(`Evil AI's score: ${scoreO}`);
       } else {
         scoreO++;
         scoreX;
-        $("#O").text(`Player O score: ${scoreO}`);
-        $("#X").text(`Player X score: ${scoreX}`);
+        $("#O").text(`Evil AI's score: ${scoreO}`);
+        $("#X").text(`Your score: ${scoreX}`);
       }
       gameOver = true;
       return;
@@ -123,6 +145,11 @@ $(document).ready(function() {
     } // end of if
 
     nextTurn();
+    if ( whoseTurn === AiTurn && AiMode === true ) {
+        AiMove();
+    }
+
+
 
     // AI Player move here: something like AIMove();
     // nextTurn();  // human player's turn again
