@@ -15,7 +15,7 @@ git clone git@github.com:eggyducktective/tic-tac-toe.git
 
 ```
 
-### Prerequisites
+## Prerequisites
 
 You will need to install your favourite web browser to play this fun game.
 
