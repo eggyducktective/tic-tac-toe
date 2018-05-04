@@ -68,7 +68,8 @@ const testMove = function () {
 const AiMove = function () {
   const squareID = testMove();
 
-  if ( $("#" + squareID).html() === "") {
+  if ( $("#" + squareID).html() == "&nbsp;" || $("#" + squareID).html() == "") {
+
     $("#" + squareID).click();
   } else {
     AiMove();
@@ -123,7 +124,6 @@ $(document).ready(function() {
       }
       declareWinner(`${players[winner]}!!! &#9996;`);
 
-      //
       if (gameBoard[boardIndex] === "X") {
         scoreX++; // adding the winner's score to the scoreboard
         scoreO; //keep the loser's score the same
