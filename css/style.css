@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-/* @import url('https://fonts.googleapis.com/css?family=Fredoka+One|Permanent+Marker'); */
 
 body {
-  /* font-family: 'Do Hyeon', sans-serif; */
   font-family: 'Permanent Marker', cursive;
   font-size: 20px;
   color: hotPink;
@@ -34,7 +32,7 @@ body {
 }
 
 
-@keyframes blink {
+@keyframes blink { /* make SAW img blinking */
     0% {
         opacity: 1;
     }
@@ -105,6 +103,8 @@ table {
   width: 30%;
 }
 
+
+/* create borderless effect */
 td:first-of-type {
   border-left-color: transparent;
   border-top-color: transparent;
@@ -123,9 +123,11 @@ tr:nth-of-type(3) td {
   border-bottom-color: transparent;
 }
 
+/* hide youtube video */
 iframe {
   display: none;
 }
+
 
 footer {
   position: absolute;

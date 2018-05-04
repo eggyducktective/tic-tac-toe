@@ -1,12 +1,11 @@
-//check whose turn it is, X or O,
 
-let whoseTurn = "X";
+
+let whoseTurn = "X"; // human plays first
 let AiTurn = "O";
-let AiMode = true;
 
-
+//check whose turn it is, human or AI
 const nextTurn = function() {
-  if (whoseTurn == "X") {
+  if (whoseTurn === "X") {
     whoseTurn = "O";
   } else {
     whoseTurn = "X";
@@ -21,8 +20,10 @@ let scoreO = 0;
 let gameOver = false;
 let moveCount = 0;
 let gameBoard = ["", "", "", "", "", "", "", "", ""];
+let tempSquares = {};
 
-// Check for Winning condition:
+
+// Check for Win condition:
 // Horizontal: [0, 1, 2] [3, 4, 5] [6, 7, 8]
 // Vertical: [0, 3, 6] [1, 4, 7] [2, 5, 8]
 // Diagonal: [0, 4, 8] [2, 4, 6]
@@ -58,17 +59,16 @@ const checkForWin = function() {
 }; //end of function
 
 
-// let resetGame;
-let tempSquares = {};
 
-const testMove = function (){
+//get a random number for AI move
+const testMove = function () {
   return Math.floor(Math.random()*9)
 }
 
 const AiMove = function () {
   const squareID = testMove();
 
-  if ( $("#" + squareID).html() == "&nbsp;" || $("#" + squareID).html() == "") {
+  if ( $("#" + squareID).html() === "") {
     $("#" + squareID).click();
   } else {
     AiMove();
@@ -77,7 +77,7 @@ const AiMove = function () {
 
 $(document).ready(function() {
 
-  //add event handler for button
+  //add event handler for reset game button.
   const $button = $("#buttonPosition");
   $button.on("click", function() {
     gameBoard = ["", "", "", "", "", "", "", "", ""];
@@ -96,6 +96,7 @@ $(document).ready(function() {
   } // end of loop
 
 
+
   //add event handler
   $(".square").click(function(event) {
 
@@ -103,7 +104,7 @@ $(document).ready(function() {
     // if square is already taken, return from this function early
     const boardIndex = $(this).attr("id");
 
-    if ( gameBoard[boardIndex].length > 0 || gameOver  ) {
+    if ( gameBoard[boardIndex] || gameOver  ) {
       return; //make sure players can't play over a move
     }
 
@@ -114,45 +115,37 @@ $(document).ready(function() {
 
 
     const winner = checkForWin();
-    if (winner !== false && winner !== "") {
-      // if (gameBoard[boardIndex]) === "X" {
-      //   declareWinner("You win");
-      // } else {
-      //   declareWinner("Computer wins");
-      // }
+
+    if (winner && winner !== "") {
       const players = {
         "X": "You win",
         "O": "Evil AI wins"
       }
       declareWinner(`${players[winner]}!!! &#9996;`);
 
+      //
       if (gameBoard[boardIndex] === "X") {
-        scoreX++;
-        scoreO;
+        scoreX++; // adding the winner's score to the scoreboard
+        scoreO; //keep the loser's score the same
         $("#X").text(`Your score: ${scoreX}`);
         $("#O").text(`Evil AI's score: ${scoreO}`);
       } else {
-        scoreO++;
-        scoreX;
+        scoreO++; //adding the winner' score to the scoreboard
+        scoreX; //keep the loser's score the same
         $("#O").text(`Evil AI's score: ${scoreO}`);
         $("#X").text(`Your score: ${scoreX}`);
-      }
+      } //end of if statement
       gameOver = true;
       return;
 
     } else if (moveCount === gameBoard.length) {
       declareWinner("No one wins... &#9785;");
-    } // end of if
+    } // end of if statement
 
     nextTurn();
-    if ( whoseTurn === AiTurn && AiMode === true ) {
+    if ( whoseTurn === AiTurn) {
         AiMove();
-    }
-
-
-
-    // AI Player move here: something like AIMove();
-    // nextTurn();  // human player's turn again
+    } // end of if statement
 
   }); // end of event handler
 
@@ -162,7 +155,3 @@ $(document).ready(function() {
   }; // end of function
 
 }); // end jQuery
-
-
-
-//math random for AI Mathfloor[mathrandom]
